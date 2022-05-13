@@ -25,3 +25,32 @@ Please run the following notebooks in th ``` ./exp ```
 - mln_deberta_v3_large.ipynb
 - mlm_deberta_v2_xlarge.ipynb
 - mlm_deberta_v2_xlxarge.ipynb
+
+## Training(No pseudo label)
+Please run the following notebooks in th ``` ./exp ```. 
+Sometimes the training of deberta-v2-xlarge fails (score goes to 0), so please retrain the failed fold.
+- exp029_deberta_v3_large.ipynb
+- exp032_deberta_v2_xlarge.ipynb
+
+## Pseudo label
+Please run the following notebooks in th ``` ./exp ```. 
+- exp029_deberta_v3_large_make_pseudo.ipynb
+- exp032_deberta_v2_xlarge_make_pseudo.ipynb
+
+## Training(With pseudo label) 
+Please run the following notebooks in th ``` ./exp ```. 
+I used preemptable instances, so one part of the model has separate training code for each fold.
+Sometimes the training of deberta-v2-xlarge and deberta-v2-xxlarge fails (score goes to 0), so please retrain the failed fold.
+- deberta-v3-large
+    - exp038_deberta_v3_large_with_pseudo.ipynb
+- deberta-v2-xlarge
+    - exp041_deberta_v2_xlarge_with_pseudo_fold0.ipynb
+    - exp041_deberta_v2_xlarge_with_pseudo_fold1_4.ipynb
+        - Training of fold3 failed, so only fold3 was trained again.
+    - exp041_deberta_v2_xlarge_with_pseudo_fold3.ipynb
+- deberta-v2-xxlarge
+    - exp051_deberta_v2_xxlarge_with_pseudo_fold0.ipynb
+    - exp051_deberta_v2_xxlarge_with_pseudo_fold1.ipynb
+    - exp051_deberta_v2_xxlarge_with_pseudo_fold2.ipynb
+    - exp051_deberta_v2_xxlarge_with_pseudo_fold3.ipynb
+    - exp051_deberta_v2_xxlarge_with_pseudo_fold4.ipynb
