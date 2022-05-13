@@ -54,3 +54,46 @@ Sometimes the training of deberta-v2-xlarge and deberta-v2-xxlarge fails (score 
     - exp051_deberta_v2_xxlarge_with_pseudo_fold2.ipynb
     - exp051_deberta_v2_xxlarge_with_pseudo_fold3.ipynb
     - exp051_deberta_v2_xxlarge_with_pseudo_fold4.ipynb
+
+# Nakama's part
+#### Go to ./nakama directory and do the following.
+## Data download
+- Download data to ./colab/input/nbme-score-clinical-patient-notes from https://www.kaggle.com/competitions/nbme-score-clinical-patient-notes/data.
+- Download data to ./colab/input/deberta-v2-v3-tokenizer-fast https://www.kaggle.com/datasets/yasufuminakama/deberta-v2-v3-tokenizer-fast.
+
+## Environment
+- ./kaggle
+    - Kaggle Notebook
+    - Add Following Data 
+        - https://www.kaggle.com/code/yasufuminakama/nbme-pip-wheels
+        - https://www.kaggle.com/datasets/yasufuminakama/deberta-v2-v3-tokenizer-fast
+- ./colab
+    - Google Colaboratory
+    - Note that ./colab/* notebooks are put in ./drive/MyDrive/Colab Notebooks/NBME
+
+## Pretrain(MLM)
+Please run the following notebooks using Kaggle Notebook.
+- ./kaggle/nbme-deberta-v3-large-mlm-exp1.ipynb
+    - Setting fold=0,1,2,3 but 12 hours runtime limit will be applied. You will get fold=0,1 model.
+- ./kaggle/nbme-deberta-v3-large-mlm-exp1-fold2-3.ipynb
+    - Same code as above except different fold setting.
+    - Setting fold=2,3. You will get fold=2,3 model.
+Then move pretrained 4 models to ./colab/mlm/kaggle-exp1
+
+## Training(No pseudo label)
+Please run the following notebook using Google Colaboratory. 
+- ./colab/train/exp48/exp48.ipynb
+
+## Prepare pseudo label dataset from unlabelled data
+Please run the following notebook using Google Colaboratory. 
+- ./colab/pseudo/make_pseudo_dataset.ipynb
+
+## Training with pseudo label(1st time)
+Please run the following notebooks using Google Colaboratory. 
+- ./colab/pseudo/exp48/exp48.ipynb
+- ./colab/train/exp135/exp135.ipynb
+
+## Training with pseudo label(2nd time)
+Please run the following notebooks using Google Colaboratory. 
+- ./colab/pseudo/exp135/exp135.ipynb
+- ./colab/train/exp141/exp141.ipynb
