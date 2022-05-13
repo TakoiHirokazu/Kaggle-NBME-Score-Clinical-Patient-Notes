@@ -40,7 +40,7 @@ Please run the following notebooks in th ``` ./exp ```.
 ## Training(With pseudo label) 
 Please run the following notebooks in th ``` ./exp ```. 
 I used preemptable instances, so one part of the model has separate training code for each fold.
-Sometimes the training of deberta-v2-xlarge and deberta-v2-xxlarge fails (score goes to 0), so please retrain the failed fold.
+Sometimes the training of deberta-v2-xlarge and deberta-v2-xxlarge fails (score goes to 0), so please retrain the failed fold. Please note that deberta-v2-xxlarge in particular often fails to train.
 - deberta-v3-large
     - exp038_deberta_v3_large_with_pseudo.ipynb
 - deberta-v2-xlarge
