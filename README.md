@@ -1,5 +1,7 @@
 # Kaggle-NBME-Score-Clinical-Patient-Notes
 
+<img width="1328" alt="スクリーンショット 2022-05-14 20 27 38" src="https://user-images.githubusercontent.com/30746280/168423739-557f36aa-8e52-4006-8c49-03dbafc107de.png">
+
 # Takoi's part
 ## Hardware
 Google Cloud Platform
