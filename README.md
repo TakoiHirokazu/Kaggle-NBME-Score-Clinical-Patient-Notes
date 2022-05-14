@@ -48,7 +48,7 @@ Sometimes the training of deberta-v2-xlarge and deberta-v2-xxlarge fails (score 
 - deberta-v2-xlarge
     - exp041_deberta_v2_xlarge_with_pseudo_fold0.ipynb
     - exp041_deberta_v2_xlarge_with_pseudo_fold1_4.ipynb
-        - Training of fold3 failed, so only fold3 was trained again.
+        - I failed to learn fold 3, so I had to train it again. If you don't fail, you don't need to train only fold 3 below. The training results of each fold need to be combined, so please do that.
     - exp041_deberta_v2_xlarge_with_pseudo_fold3.ipynb
 - deberta-v2-xxlarge
     - exp051_deberta_v2_xxlarge_with_pseudo_fold0.ipynb
@@ -56,6 +56,10 @@ Sometimes the training of deberta-v2-xlarge and deberta-v2-xxlarge fails (score 
     - exp051_deberta_v2_xxlarge_with_pseudo_fold2.ipynb
     - exp051_deberta_v2_xxlarge_with_pseudo_fold3.ipynb
     - exp051_deberta_v2_xxlarge_with_pseudo_fold4.ipynb
+
+## Threshold optimization
+Please store the prediction of nakama's exp141 in ``` ./output/nakama ``` . I could not read the pkl file due to  different version of pandas, so I converted it to csv and then stored it. Then please run the following notebooks in th ``` ./exp ```. 
+- threshold_optimization_ensemble.ipynb
 
 # Nakama's part
 #### Go to ./nakama directory and do the following.
